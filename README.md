@@ -42,7 +42,19 @@ Engineering project exploring recovery of automobile exhaust heat using thermoel
 
 **TEG · Seebeck Effect · Waste Heat Recovery · Automotive Engineering**
 
-> More project repositories will be added as individual projects are cleaned, tested and documented.
+### 📚 [Engineering Project Portfolio](projects/)
+
+Structured documentation, testing checklists and future evidence areas for the projects above.
+
+---
+
+## 🧪 Engineering Documentation Standard
+
+I am building each project around a simple engineering workflow:
+
+**Design → Build → Test → Measure → Document → Improve**
+
+Project pages are intentionally separated from unverified claims. Actual source code, circuit diagrams, photographs, measurements and test results will be added from the corresponding physical implementations.
 
 ---
 
