@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Helmet Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>🛡️ Smart Helmet Dashboard</h1>
+    <p>Status: <strong id="status">--</strong></p>
+    <p>Latitude: <strong id="latitude">--</strong></p>
+    <p>Longitude: <strong id="longitude">--</strong></p>
+    <div id="crash-status">Waiting for data...</div>
+
+    <script>
+        function fetchData() {
+            fetch('/status')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('status').textContent = data.status;
+                    document.getElementById('latitude').textContent = Number(data.latitude).toFixed(6);
+                    document.getElementById('longitude').textContent = Number(data.longitude).toFixed(6);
+
+                    document.getElementById('crash-status').textContent = data.crash_alert
+                        ? '🚨 CRASH ALERT DETECTED!'
+                        : '✓ Normal Operation';
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    document.getElementById('crash-status').textContent = '⚠️ Connection Error';
+                });
+        }
+
+        setInterval(fetchData, 2000);
+        fetchData();
+    </script>
+</body>
+</html>
