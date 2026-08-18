@@ -1,0 +1,31 @@
+body {
+    background-color: #0d1117;
+    color: #f0f0f0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: linear-gradient(90deg, #ff4500, #ff8800);
+    padding: 20px 0;
+    color: white;
+}
+
+.map-container {
+    width: 90%;
+    height: 80vh;
+    margin: 20px auto;
+    border: 3px solid #ff8800;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px #ff6600;
+}
+
+.footer {
+    background-color: #111;
+    padding: 15px;
+    font-size: 1rem;
+    color: #aaa;
+}
