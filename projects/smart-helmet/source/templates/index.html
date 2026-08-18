@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Smart Helmet Live Map</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+  <link rel="stylesheet" href="/static/style.css" />
+  <style>
+    #map { height: 70vh; width: 90%; margin: 20px auto; border-radius: 8px; }
+    .panel { text-align:center; color:#fff; }
+    #statusBox { display:inline-block; margin:10px; padding:6px 12px; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>🪖 Smart Helmet Live Location</h1>
+  </header>
+
+  <div id="map"></div>
+  <div class="panel">
+    <div id="statusBox">Status: <strong id="statusText">OFF</strong></div>
+    <div>Lat: <span id="lat">12.9716</span>, Lon: <span id="lon">77.5946</span></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script>
+    let lat = 12.9716;
+    let lon = 77.5946;
+    const map = L.map('map').setView([lat, lon], 15);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const marker = L.marker([lat, lon]).addTo(map).bindPopup('Helmet Location').openPopup();
+
+    function updateMarker(newLat, newLon, status) {
+      marker.setLatLng([newLat, newLon]);
+      map.setView([newLat, newLon]);
+      document.getElementById('lat').textContent = newLat.toFixed(6);
+      document.getElementById('lon').textContent = newLon.toFixed(6);
+      document.getElementById('statusText').textContent = status === '1' ? 'ON' : 'OFF';
+      document.getElementById('statusBox').style.background = status === '1' ? '#22c55e' : '#ef4444';
+    }
+
+    async function pollStatus() {
+      try {
+        const response = await fetch('/status');
+        if (!response.ok) throw new Error('Network error');
+        const data = await response.json();
+        updateMarker(Number(data.latitude) || lat, Number(data.longitude) || lon, String(data.status || '0'));
+      } catch (error) {
+        console.error('Poll error:', error);
+      }
+    }
+
+    setInterval(pollStatus, 3000);
+    pollStatus();
+  </script>
+</body>
+</html>
