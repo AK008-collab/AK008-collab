@@ -1,10 +1,25 @@
 # 👋 Hi, I'm Abilash K
 
-### Mechatronics Engineering Student • Embedded Systems • IoT • Robotics • UAV Systems
+### Mechatronics Engineering Student • Robotics • ROS • Embedded Systems • UAVs
 
-I build practical engineering systems that combine **mechanical design, embedded electronics, wireless communication, automation and intelligent technologies**.
+I’m a Mechatronics Engineering student interested in building intelligent robotic systems that connect **mechanical design, embedded electronics, sensing, control and robot software**.
 
-My current focus is on **ESP32-based embedded systems, IoT, robotics, UAV systems, Linux for robotics, and building a strong foundation in AI/ML**.
+I’m currently strengthening my robotics software skills for robotics internship opportunities, with a focus on **ROS, Gazebo simulation, Linux, robot sensing and autonomous navigation concepts**.
+
+---
+
+## 🤖 Robotics Internship Focus
+
+I’m building my skills around the core workflow used in mobile robotics:
+
+- **ROS / ROS 2 fundamentals:** nodes, topics, messages, launch files and TF concepts
+- **Gazebo:** robot simulation and testing behaviors in a virtual environment
+- **SLAM (currently learning):** understanding mapping and localization workflows
+- **Robot navigation (learning path):** sensor data, odometry, maps and autonomous navigation concepts
+- **Linux:** Ubuntu-based development and command-line workflows
+- **Python and C++:** programming foundations for robotics applications
+
+*I’m actively developing these skills and will add validated demonstrations, source code and test results as projects are completed.*
 
 ---
 
@@ -12,13 +27,13 @@ My current focus is on **ESP32-based embedded systems, IoT, robotics, UAV system
 
 | Area | Focus |
 |---|---|
-| 🔧 Embedded Systems | ESP32, ESP8266, Embedded C, sensor & actuator integration |
-| 📡 IoT & Wireless | ESP-NOW, RSSI, real-time monitoring, connected systems |
-| 🤖 Robotics | Control systems, sensing, automation and electromechanical systems |
-| 🚁 UAV Systems | Drone technology and surveying applications |
+| 🤖 Robotics | ROS fundamentals, Gazebo simulation, sensing, control and autonomous systems |
+| 🔧 Embedded Systems | ESP32, ESP8266, Embedded C, sensor and actuator integration |
+| 📡 IoT & Wireless | ESP-NOW, RSSI, wireless communication and real-time monitoring |
+| 🚁 UAV Systems | Drone technology and drone-based surveying experience |
+| 🐧 Linux | Ubuntu workflows and Linux for robotics |
+| 🛠️ CAD & Prototyping | Fusion 360, SolidWorks, AutoCAD and 3D printing |
 | 🧠 AI / ML | Building foundations for intelligent engineering systems |
-| 🐧 Linux | Learning Linux workflows for robotics development |
-| 🛠️ CAD & Prototyping | Fusion 360, SolidWorks, AutoCAD, 3D printing |
 
 ---
 
@@ -32,9 +47,9 @@ ESP32-based railway safety prototype using wireless communication and RSSI-based
 
 ### 🪖 [IoT-Based Smart Helmet for Rider Safety](projects/smart-helmet/)
 
-An emergency-response-focused smart helmet concept designed to help communicate a rider’s location and send alerts after a possible accident. GPS/GSM emergency communication is the primary value proposition; alcohol detection is an additional preventive safety feature, alongside helmet-use sensing and motion sensing.
+An emergency-response-focused smart helmet concept designed to help communicate a rider’s location and send alerts after a possible accident. GPS/GSM emergency communication is the primary value proposition; alcohol detection is an additional preventive safety feature.
 
-**ESP8266/ESP32 · MPU6050 · GPS · GSM · Alcohol Sensor · Embedded C · IoT**
+**ESP8266/ESP32 · MPU6050 · GPS · GSM · Embedded C · IoT**
 
 ### ⚡ [Thermoelectric Energy Recovery](projects/thermoelectric-energy-recovery/)
 
@@ -44,69 +59,55 @@ Engineering project exploring recovery of automobile exhaust heat using thermoel
 
 ### 📚 [Engineering Project Portfolio](projects/)
 
-Structured documentation, testing checklists and future evidence areas for the projects above.
-
----
-
-## 🧪 Engineering Documentation Standard
-
-I am building each project around a simple engineering workflow:
-
-**Design → Build → Test → Measure → Document → Improve**
-
-Project pages are intentionally separated from unverified claims. Actual source code, circuit diagrams, photographs, measurements and test results will be added from the corresponding physical implementations.
+Project documentation, engineering workflows and evidence areas for my work.
 
 ---
 
 ## 🛠️ Technical Skills
 
-**Embedded & Programming**
+**Programming & Embedded Systems**
 
-`Embedded C` `C/C++` `ESP32` `ESP8266`
+`Embedded C` `C/C++` `Python` `ESP32` `ESP8266`
+
+**Robotics & Simulation**
+
+`ROS Fundamentals` `Gazebo` `Robot Sensing` `Control Systems` `Linux for Robotics`
 
 **IoT & Hardware**
 
 `IoT` `Sensor Integration` `ESP-NOW` `Wireless Communication` `Automation`
 
-**Robotics & Engineering**
-
-`Robotics` `UAV Systems` `Linux for Robotics` `3D Printing`
-
 **CAD & Design**
 
-`Fusion 360` `SolidWorks` `AutoCAD`
+`Fusion 360` `SolidWorks` `AutoCAD` `3D Printing`
 
 **Software Development**
 
-`Python` `HTML` `CSS` `JavaScript` `Node.js` `Express.js` `MongoDB`
+`HTML` `CSS` `JavaScript` `Node.js` `Express.js` `MongoDB`
 
 **Currently Learning**
 
-`AI/ML` `Linux` `Robotics Software` `Intelligent Embedded Systems`
+`SLAM` `ROS-based Navigation` `Robotics Software` `AI/ML`
 
 ---
 
 ## 🏆 Highlights
 
-- 🎓 **Mechatronics Engineering Student**
+- 🎓 **Mechatronics Engineering student**
 - 🚁 Internship experience involving **drone-based surveying and UAV systems**
 - 🏅 **Second Place — Paper Presentation:** *Effective Utilization of Heat Loss in Automobiles using Thermoelectric Generator (TEG)*
-- 💡 Experience developing embedded, IoT, robotics and automation-based engineering prototypes
+- 💡 Hands-on work with embedded, IoT, sensing and automation-based engineering prototypes
 - 📜 **Two patents**
 
 ---
 
-## 🎯 Career Direction
+## 🎯 Current Goals
 
-I aim to become an engineer capable of combining **mechanical systems, embedded electronics, robotics and AI** to design practical intelligent machines and automation systems.
-
-### Current priorities
-
-1. Strengthen embedded systems and ESP32 development
-2. Build stronger robotics and Linux skills
-3. Develop a solid AI/ML foundation
-4. Turn engineering prototypes into well-documented, testable projects
-5. Build a portfolio that demonstrates both hardware and software capability
+1. Strengthen ROS and robotics software fundamentals
+2. Build and document a robot simulation using Gazebo
+3. Learn SLAM and understand mapping/localization workflows
+4. Improve Linux, Python and C++ skills for robotics development
+5. Publish clear project evidence: code, setup instructions, simulation results and lessons learned
 
 ---
 
@@ -116,6 +117,6 @@ I aim to become an engineer capable of combining **mechanical systems, embedded 
 
 ---
 
-> **Build it. Test it. Measure it. Improve it.** ⚙️
+> **Design it. Simulate it. Test it. Improve it.** ⚙️
 
 ⭐ *Thanks for visiting my profile.*
