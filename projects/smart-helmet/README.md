@@ -1,27 +1,31 @@
-# 🪖 Smart Helmet Safety System
+# 🪖 IoT-Based Smart Helmet for Rider Safety
 
 ## Overview
 
-An IoT-based two-wheeler safety prototype that combines helmet-use detection, alcohol detection, motion sensing, ignition control and emergency communication.
+This project is positioned first and foremost as an **emergency-response system for two-wheeler riders**. Its main value is to help communicate a rider’s location and send emergency alerts when a possible accident is detected. Alcohol detection is an **additional preventive safety feature**, not the primary reason to use the helmet.
 
-## Core Idea
+The goal is to support riders and their families with timely emergency information while keeping the rider-facing experience straightforward.
 
-The system is designed to prevent unsafe vehicle operation and respond to accident conditions. Sensor data is processed by an ESP8266/ESP32 controller, while GPS/GSM communication can provide location-based emergency alerts.
+## Primary Value: Emergency Response
 
-## Main Features
+- Detect a possible accident using motion/impact sensing.
+- Acquire the rider’s GPS location.
+- Send an emergency notification through GSM communication.
+- Provide a companion web/app interface for viewing status and location information.
 
-- Helmet-wearing detection
-- Alcohol detection
-- Accelerometer-based crash detection
-- Ignition control through relay
-- GPS location acquisition
-- GSM emergency notification
-- IoT monitoring dashboard
+These are intended capabilities; detection reliability, alert delivery and location accuracy must be validated through controlled testing before making performance claims.
+
+## Additional Safety Features
+
+- **Alcohol detection:** an additional preventive check.
+- **Helmet-use detection:** detects whether the helmet is being worn, according to the prototype’s sensor/input design.
+- **Ignition control:** relay-based control, where implemented and validated.
+- **Buzzer/indicators:** local warnings and status feedback.
 
 ## Hardware
 
-- ESP8266 / ESP32
-- MPU6050 accelerometer
+- ESP8266 / ESP32 controller
+- MPU6050 accelerometer/gyroscope for motion sensing
 - Alcohol detection sensor
 - Push-button / helmet detection input
 - GPS module
@@ -36,20 +40,25 @@ The system is designed to prevent unsafe vehicle operation and respond to accide
 ## System Flow
 
 ```text
-Sensors
-   ↓
-ESP Controller
-   ├── Helmet / Alcohol Safety Check → Ignition Control
-   └── Motion / Crash Detection → GPS → GSM Emergency Alert
-                                      ↓
-                                  Flask API
-                                      ↓
-                              Live Web Dashboard
+Motion / Impact Sensors
+          ↓
+    ESP Controller
+          ↓
+  Possible Accident Event
+          ↓
+    Obtain GPS Location
+          ↓
+     GSM Alert Message
+          ↓
+Emergency Contact / Dashboard
+
+Additional safety inputs:
+Alcohol Sensor · Helmet-use Input · Optional Relay Control
 ```
 
 ## 🌐 Web Backend & Dashboard
 
-The project now includes the **actual web/backend source code** supplied for the prototype:
+The project repository includes prototype backend and frontend source code:
 
 👉 **[Open Smart Helmet Source Code](source/)**
 
@@ -65,7 +74,7 @@ The project now includes the **actual web/backend source code** supplied for the
 
 - Live status dashboard
 - GPS coordinate display
-- OpenStreetMap/Leaflet live location map
+- OpenStreetMap/Leaflet location map
 - Automatic polling for updated data
 
 ## Local Setup
@@ -101,9 +110,18 @@ The prototype Flask server listens on port `5000`.
 
 The current prototype treats `status = -1` as a crash-alert condition.
 
-## Engineering Value
+## Rider-Centred Design Principle
 
-The project demonstrates how embedded systems can combine multiple sensor inputs with actuator control, wireless communication, GPS/GSM emergency communication and a web-based monitoring layer.
+The helmet should be presented as a familiar riding product with **emergency support as the main benefit**, rather than as a device focused on checking or monitoring the rider. Alcohol detection remains a supporting safety feature.
+
+## Validation Priorities
+
+- Test possible-accident detection and reduce false alerts.
+- Verify GPS location accuracy in different environments.
+- Test GSM message delivery and response time.
+- Evaluate usability and comfort with rider feedback.
+- Validate helmet-use and alcohol-sensor behavior independently.
+- Review electrical safety, helmet compliance and manufacturing requirements before deployment.
 
 ## Future Improvements
 
@@ -114,4 +132,4 @@ The project demonstrates how embedded systems can combine multiple sensor inputs
 - Secure authenticated API
 - HTTPS deployment
 - GNSS improvements for better positioning
-- Field testing with controlled safety scenarios
+- Controlled field testing and documented results
