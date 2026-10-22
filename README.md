@@ -30,11 +30,11 @@ ESP32-based railway safety prototype using wireless communication and RSSI-based
 
 **ESP32 · ESP-NOW · RSSI · L298N · Embedded C · IoT**
 
-### 🪖 [Smart Helmet Safety System](projects/smart-helmet/)
+### 🪖 [IoT-Based Smart Helmet for Rider Safety](projects/smart-helmet/)
 
-IoT-based two-wheeler safety prototype combining helmet detection, alcohol detection, motion sensing, ignition control and GPS/GSM emergency communication.
+An emergency-response-focused smart helmet concept designed to help communicate a rider’s location and send alerts after a possible accident. GPS/GSM emergency communication is the primary value proposition; alcohol detection is an additional preventive safety feature, alongside helmet-use sensing and motion sensing.
 
-**ESP8266/ESP32 · MPU6050 · GPS · GSM · Embedded C · IoT**
+**ESP8266/ESP32 · MPU6050 · GPS · GSM · Alcohol Sensor · Embedded C · IoT**
 
 ### ⚡ [Thermoelectric Energy Recovery](projects/thermoelectric-energy-recovery/)
 
