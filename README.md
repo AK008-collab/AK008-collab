@@ -57,6 +57,12 @@ Engineering project exploring recovery of automobile exhaust heat using thermoel
 
 **TEG · Seebeck Effect · Waste Heat Recovery · Automotive Engineering**
 
+### 🤖 [CampusCourier — Autonomous Indoor Delivery Robot](projects/campus-courier/)
+
+Simulation-first ROS 2 project. Milestone 1 implements a testable delivery mission state machine and ROS topic interface. Mapping, simulation, Nav2 navigation, and obstacle avoidance are planned milestones and are not claimed as complete.
+
+**ROS 2 Humble · Python · rclpy · Mission State Machine**
+
 ### 📚 [Engineering Project Portfolio](projects/)
 
 Project documentation, engineering workflows and evidence areas for my work.
